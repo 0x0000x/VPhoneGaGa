@@ -91,6 +91,7 @@ for i in range(49,480):
 
     # Generate service entry
     service_entry = service_template.format(number=number)
+    
     service_element = ET.fromstring(service_entry)
     insert_after(application_node, existing_service, service_element)  # Append after the existing service element
     existing_service = service_element  # Update existing_service to the newly inserted element
